@@ -1,5 +1,4 @@
 var ss1, ss1L, ss2, ss2L, ss3, ss3L = undefined;
-console.info(ss1, ss1L, ss2, ss2L, ss3, ss3L);
 
 export default {
     onload: ({ extensionAPI }) => {
