@@ -1,7 +1,7 @@
 Organised your left sidebar shortcuts with separators.
 
 **New:**
-- define up to 5 different separators for your sidebar
+- define up to 10 different separators for your sidebar
 - define the colour, width and alignment for a HR separator
 
 Sometimes you just want some visual separation between your list of shortcuts. This extension allows you to add a horizontal line or blank space between any of your shortcuts, so you can achieve just that.
