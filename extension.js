@@ -1,4 +1,5 @@
 var ss1, ss1L, ss1A, ss1W, ss1C, ss2, ss2L, ss2A, ss2W, ss2C, ss3, ss3L, ss3A, ss3W, ss3C, ss4, ss4L, ss4A, ss4W, ss4C, ss5, ss5L, ss5A, ss5W, ss5C = undefined;
+var ss6, ss6L, ss6A, ss6W, ss6C, ss7, ss7L, ss7A, ss7W, ss7C, ss8, ss8L, ss8A, ss8W, ss8C, ss9, ss9L, ss9A, ss9W, ss9C, ss10, ss10L, ss10A, ss10W, ss10C = undefined;
 
 export default {
     onload: ({ extensionAPI }) => {
@@ -155,6 +156,156 @@ export default {
                     description: "Colour as HEX (https://www.color-hex.com/)",
                     action: { type: "input", placeholder: "#999999", onChange: (evt) => { setSS(evt, 24); } },
                 },
+                {
+                    id: "ss-6",
+                    name: "Sixth Separator Style",
+                    description: "Preference for sixth separator",
+                    action: { type: "select", items: ["Horizontal Line", "Blank Space"], onChange: (evt) => { setSS(evt, 26); } },
+                },
+                {
+                    id: "ss-6L",
+                    name: "Sixth Separator location",
+                    description: "Place Separator after which Shortcut (in order, integer)",
+                    action: { type: "input", placeholder: "integer", onChange: (evt) => { setSS(evt, 27); } },
+                },
+                {
+                    id: "ss-6A",
+                    name: "Sixth Separator alignment",
+                    description: "Align separator",
+                    action: { type: "select", items: ["center", "left", "right"], onChange: (evt) => { setSS(evt, 28); } },
+                },
+                {
+                    id: "ss-6W",
+                    name: "Sixth Separator width",
+                    description: "Width as integer %",
+                    action: { type: "input", placeholder: "60", onChange: (evt) => { setSS(evt, 29); } },
+                },
+                {
+                    id: "ss-6C",
+                    name: "Sixth Separator colour",
+                    description: "Colour as HEX (https://www.color-hex.com/)",
+                    action: { type: "input", placeholder: "#999999", onChange: (evt) => { setSS(evt, 30); } },
+                },
+                {
+                    id: "ss-7",
+                    name: "Seventh Separator Style",
+                    description: "Preference for seventh separator",
+                    action: { type: "select", items: ["Horizontal Line", "Blank Space"], onChange: (evt) => { setSS(evt, 31); } },
+                },
+                {
+                    id: "ss-7L",
+                    name: "Seventh Separator location",
+                    description: "Place Separator after which Shortcut (in order, integer)",
+                    action: { type: "input", placeholder: "integer", onChange: (evt) => { setSS(evt, 32); } },
+                },
+                {
+                    id: "ss-7A",
+                    name: "Seventh Separator alignment",
+                    description: "Align separator",
+                    action: { type: "select", items: ["center", "left", "right"], onChange: (evt) => { setSS(evt, 33); } },
+                },
+                {
+                    id: "ss-7W",
+                    name: "Seventh Separator width",
+                    description: "Width as integer %",
+                    action: { type: "input", placeholder: "60", onChange: (evt) => { setSS(evt, 34); } },
+                },
+                {
+                    id: "ss-7C",
+                    name: "Seventh Separator colour",
+                    description: "Colour as HEX (https://www.color-hex.com/)",
+                    action: { type: "input", placeholder: "#999999", onChange: (evt) => { setSS(evt, 35); } },
+                },
+                {
+                    id: "ss-8",
+                    name: "Eighth Separator Style",
+                    description: "Preference for eighth separator",
+                    action: { type: "select", items: ["Horizontal Line", "Blank Space"], onChange: (evt) => { setSS(evt, 36); } },
+                },
+                {
+                    id: "ss-8L",
+                    name: "Eighth Separator location",
+                    description: "Place Separator after which Shortcut (in order, integer)",
+                    action: { type: "input", placeholder: "integer", onChange: (evt) => { setSS(evt, 37); } },
+                },
+                {
+                    id: "ss-8A",
+                    name: "Eighth Separator alignment",
+                    description: "Align separator",
+                    action: { type: "select", items: ["center", "left", "right"], onChange: (evt) => { setSS(evt, 38); } },
+                },
+                {
+                    id: "ss-8W",
+                    name: "Eighth Separator width",
+                    description: "Width as integer %",
+                    action: { type: "input", placeholder: "60", onChange: (evt) => { setSS(evt, 39); } },
+                },
+                {
+                    id: "ss-8C",
+                    name: "Eighth Separator colour",
+                    description: "Colour as HEX (https://www.color-hex.com/)",
+                    action: { type: "input", placeholder: "#999999", onChange: (evt) => { setSS(evt, 40); } },
+                },
+                {
+                    id: "ss-9",
+                    name: "Ninth Separator Style",
+                    description: "Preference for fifth separator",
+                    action: { type: "select", items: ["Horizontal Line", "Blank Space"], onChange: (evt) => { setSS(evt, 41); } },
+                },
+                {
+                    id: "ss-9L",
+                    name: "Ninth Separator location",
+                    description: "Place Separator after which Shortcut (in order, integer)",
+                    action: { type: "input", placeholder: "integer", onChange: (evt) => { setSS(evt, 42); } },
+                },
+                {
+                    id: "ss-9A",
+                    name: "Ninth Separator alignment",
+                    description: "Align separator",
+                    action: { type: "select", items: ["center", "left", "right"], onChange: (evt) => { setSS(evt, 43); } },
+                },
+                {
+                    id: "ss-9W",
+                    name: "Ninth Separator width",
+                    description: "Width as integer %",
+                    action: { type: "input", placeholder: "60", onChange: (evt) => { setSS(evt, 44); } },
+                },
+                {
+                    id: "ss-9C",
+                    name: "Ninth Separator colour",
+                    description: "Colour as HEX (https://www.color-hex.com/)",
+                    action: { type: "input", placeholder: "#999999", onChange: (evt) => { setSS(evt, 45); } },
+                },
+                {
+                    id: "ss-10",
+                    name: "Tenth Separator Style",
+                    description: "Preference for tenth separator",
+                    action: { type: "select", items: ["Horizontal Line", "Blank Space"], onChange: (evt) => { setSS(evt, 46); } },
+                },
+                {
+                    id: "ss-10L",
+                    name: "Tenth Separator location",
+                    description: "Place Separator after which Shortcut (in order, integer)",
+                    action: { type: "input", placeholder: "integer", onChange: (evt) => { setSS(evt, 47); } },
+                },
+                {
+                    id: "ss-10A",
+                    name: "Tenth Separator alignment",
+                    description: "Align separator",
+                    action: { type: "select", items: ["center", "left", "right"], onChange: (evt) => { setSS(evt, 48); } },
+                },
+                {
+                    id: "ss-10W",
+                    name: "Tenth Separator width",
+                    description: "Width as integer %",
+                    action: { type: "input", placeholder: "60", onChange: (evt) => { setSS(evt, 49); } },
+                },
+                {
+                    id: "ss-10C",
+                    name: "Tenth Separator colour",
+                    description: "Colour as HEX (https://www.color-hex.com/)",
+                    action: { type: "input", placeholder: "#999999", onChange: (evt) => { setSS(evt, 50); } },
+                },
             ]
         };
         extensionAPI.settings.panel.create(config);
@@ -248,6 +399,96 @@ export default {
             ss5C = extensionAPI.settings.get("ss-5C");
         } else {
             ss5C = "#999999";
+        }
+
+        if (extensionAPI.settings.get("ss-6")) {
+            ss6 = extensionAPI.settings.get("ss-6");
+        } else {
+            ss6 = "Horizontal Line";
+        }
+        ss6L = extensionAPI.settings.get("ss-6L");
+        ss6A = extensionAPI.settings.get("ss-6A");
+        if (extensionAPI.settings.get("ss-6W")) {
+            ss6W = extensionAPI.settings.get("ss-6W");
+        } else {
+            ss6W = "60";
+        }
+        if (extensionAPI.settings.get("ss-6C")) {
+            ss6C = extensionAPI.settings.get("ss-6C");
+        } else {
+            ss6C = "#999999";
+        }
+
+        if (extensionAPI.settings.get("ss-7")) {
+            ss7 = extensionAPI.settings.get("ss-7");
+        } else {
+            ss7 = "Horizontal Line";
+        }
+        ss7L = extensionAPI.settings.get("ss-7L");
+        ss7A = extensionAPI.settings.get("ss-7A");
+        if (extensionAPI.settings.get("ss-7W")) {
+            ss7W = extensionAPI.settings.get("ss-7W");
+        } else {
+            ss7W = "60";
+        }
+        if (extensionAPI.settings.get("ss-7C")) {
+            ss7C = extensionAPI.settings.get("ss-7C");
+        } else {
+            ss7C = "#999999";
+        }
+
+        if (extensionAPI.settings.get("ss-8")) {
+            ss8 = extensionAPI.settings.get("ss-8");
+        } else {
+            ss8 = "Horizontal Line";
+        }
+        ss8L = extensionAPI.settings.get("ss-8L");
+        ss8A = extensionAPI.settings.get("ss-8A");
+        if (extensionAPI.settings.get("ss-8W")) {
+            ss8W = extensionAPI.settings.get("ss-8W");
+        } else {
+            ss8W = "60";
+        }
+        if (extensionAPI.settings.get("ss-8C")) {
+            ss8C = extensionAPI.settings.get("ss-8C");
+        } else {
+            ss8C = "#999999";
+        }
+
+        if (extensionAPI.settings.get("ss-9")) {
+            ss9 = extensionAPI.settings.get("ss-9");
+        } else {
+            ss9 = "Horizontal Line";
+        }
+        ss9L = extensionAPI.settings.get("ss-9L");
+        ss9A = extensionAPI.settings.get("ss-9A");
+        if (extensionAPI.settings.get("ss-9W")) {
+            ss9W = extensionAPI.settings.get("ss-9W");
+        } else {
+            ss9W = "60";
+        }
+        if (extensionAPI.settings.get("ss-9C")) {
+            ss9C = extensionAPI.settings.get("ss-9C");
+        } else {
+            ss9C = "#999999";
+        }
+
+        if (extensionAPI.settings.get("ss-10")) {
+            ss10 = extensionAPI.settings.get("ss-10");
+        } else {
+            ss10 = "Horizontal Line";
+        }
+        ss10L = extensionAPI.settings.get("ss-10L");
+        ss10A = extensionAPI.settings.get("ss-10A");
+        if (extensionAPI.settings.get("ss-10W")) {
+            ss10W = extensionAPI.settings.get("ss-10W");
+        } else {
+            ss10W = "60";
+        }
+        if (extensionAPI.settings.get("ss-10C")) {
+            ss10C = extensionAPI.settings.get("ss-10C");
+        } else {
+            ss10C = "#999999";
         }
         createSeparators();
 
@@ -363,6 +604,116 @@ export default {
                 }
             } else if (i == 25) {
                 ss5A = evt;
+            } else if (i == 26) {
+                ss6 = evt;
+            }  else if (i == 27) {
+                if (evt.target.value != "") {
+                    ss6L = evt.target.value;
+                } else {
+                    ss6L = null;
+                }
+            }  else if (i == 28) {
+                ss6A = evt;
+            }  else if (i == 29) {
+                if (evt.target.value != "") {
+                    ss6W = evt.target.value;
+                } else {
+                    ss6W = "60";
+                }
+            }  else if (i == 30) {
+                if (evt.target.value != "") {
+                    ss6C = evt.target.value;
+                } else {
+                    ss6C = "#999999";
+                }
+            } else if (i == 31) {
+                ss7 = evt;
+            }  else if (i == 32) {
+                if (evt.target.value != "") {
+                    ss7L = evt.target.value;
+                } else {
+                    ss7L = null;
+                }
+            }  else if (i == 33) {
+                ss7A = evt;
+            }  else if (i == 34) {
+                if (evt.target.value != "") {
+                    ss7W = evt.target.value;
+                } else {
+                    ss7W = "60";
+                }
+            }  else if (i == 35) {
+                if (evt.target.value != "") {
+                    ss7C = evt.target.value;
+                } else {
+                    ss7C = "#999999";
+                }
+            }  else if (i == 36) {
+                ss8 = evt;
+            }  else if (i == 37) {
+                if (evt.target.value != "") {
+                    ss8L = evt.target.value;
+                } else {
+                    ss8L = null;
+                }
+            }  else if (i == 38) {
+                ss8A = evt;
+            }  else if (i == 39) {
+                if (evt.target.value != "") {
+                    ss8W = evt.target.value;
+                } else {
+                    ss8W = "60";
+                }
+            }  else if (i == 40) {
+                if (evt.target.value != "") {
+                    ss8C = evt.target.value;
+                } else {
+                    ss8C = "#999999";
+                }
+            }  else if (i == 41) {
+                ss9 = evt;
+            }  else if (i == 42) {
+                if (evt.target.value != "") {
+                    ss9L = evt.target.value;
+                } else {
+                    ss9L = null;
+                }
+            }  else if (i == 43) {
+                ss9A = evt;
+            }  else if (i == 44) {
+                if (evt.target.value != "") {
+                    ss9W = evt.target.value;
+                } else {
+                    ss9W = "60";
+                }
+            }  else if (i == 45) {
+                if (evt.target.value != "") {
+                    ss9C = evt.target.value;
+                } else {
+                    ss9C = "#999999";
+                }
+            }  else if (i == 46) {
+                ss10 = evt;
+            }  else if (i == 47) {
+                if (evt.target.value != "") {
+                    ss10L = evt.target.value;
+                } else {
+                    ss10L = null;
+                }
+            }  else if (i == 48) {
+                ss10A = evt;
+            }  else if (i == 49) {
+                if (evt.target.value != "") {
+                    ss10W = evt.target.value;
+                } else {
+                    ss10W = "60";
+                }
+            }  else if (i == 50) {
+                if (evt.target.value != "") {
+                    ss10C = evt.target.value;
+                } else {
+                    ss10C = "#999999";
+                }
             } 
             createSeparators();
         }
@@ -384,6 +735,21 @@ export default {
         if (document.getElementById("sidebar_sep_5")) {                
             document.getElementById("sidebar_sep_5").remove();
         }
+        if (document.getElementById("sidebar_sep_6")) {                
+            document.getElementById("sidebar_sep_6").remove();
+        }
+        if (document.getElementById("sidebar_sep_7")) {                
+            document.getElementById("sidebar_sep_7").remove();
+        }
+        if (document.getElementById("sidebar_sep_8")) {                
+            document.getElementById("sidebar_sep_8").remove();
+        }
+        if (document.getElementById("sidebar_sep_9")) {                
+            document.getElementById("sidebar_sep_9").remove();
+        }
+        if (document.getElementById("sidebar_sep_10")) {                
+            document.getElementById("sidebar_sep_10").remove();
+        }
     }
 }
 
@@ -403,8 +769,23 @@ function createSeparators() {
     if (document.getElementById("sidebar_sep_5")) {                
         document.getElementById("sidebar_sep_5").remove();
     }
+    if (document.getElementById("sidebar_sep_6")) {                
+        document.getElementById("sidebar_sep_6").remove();
+    }
+    if (document.getElementById("sidebar_sep_7")) {                
+        document.getElementById("sidebar_sep_7").remove();
+    }
+    if (document.getElementById("sidebar_sep_8")) {                
+        document.getElementById("sidebar_sep_8").remove();
+    }
+    if (document.getElementById("sidebar_sep_9")) {                
+        document.getElementById("sidebar_sep_9").remove();
+    }
+    if (document.getElementById("sidebar_sep_10")) {                
+        document.getElementById("sidebar_sep_10").remove();
+    }
 
-    if ((ss1L != undefined && ss1L != null) || (ss2L != undefined && ss2L != null) || (ss3L != undefined && ss3L != null) || (ss4L != undefined && ss4L != null) || (ss5L != undefined && ss5L != null)) {
+    if ((ss1L != undefined && ss1L != null) || (ss2L != undefined && ss2L != null) || (ss3L != undefined && ss3L != null) || (ss4L != undefined && ss4L != null) || (ss5L != undefined && ss5L != null) || (ss6L != undefined && ss6L != null) || (ss7L != undefined && ss7L != null) || (ss8L != undefined && ss8L != null) || (ss9L != undefined && ss9L != null) || (ss10L != undefined && ss10L != null)) {
         let shortcuts = document.querySelectorAll("div.starred-pages > a");
         let shortcutsParent = document.querySelector("div.starred-pages");
 
@@ -501,6 +882,101 @@ function createSeparators() {
                 shortcutsParent.insertBefore(hr, shortcuts[ss5L])
             } else {
                 shortcutsParent.insertBefore(br, shortcuts[ss5L])
+            }
+        }
+        if (ss6L != undefined && ss6L != null) {
+            let hr = document.createElement('hr');
+            hr.style.width = ss6W+"%";
+            hr.style.border = "1px solid "+ss6C;
+            hr.style.backgroundColor = ss6C;
+            if (ss6A == "left") {
+                hr.style.marginLeft = "5px";
+            } else if (ss6A == "right") {
+                hr.style.marginRight = "5px";
+            }       
+            hr.id = "sidebar_sep_6";
+            let br = document.createElement('br');
+            br.id = "sidebar_sep_6";
+            if (ss6 == "Horizontal Line") {
+                shortcutsParent.insertBefore(hr, shortcuts[ss6L])
+            } else {
+                shortcutsParent.insertBefore(br, shortcuts[ss6L])
+            }
+        }
+        if (ss7L != undefined && ss7L != null) {
+            let hr = document.createElement('hr');
+            hr.style.width = ss7W+"%";
+            hr.style.border = "1px solid "+ss7C;
+            hr.style.backgroundColor = ss7C;
+            if (ss7A == "left") {
+                hr.style.marginLeft = "5px";
+            } else if (ss7A == "right") {
+                hr.style.marginRight = "5px";
+            }       
+            hr.id = "sidebar_sep_7";
+            let br = document.createElement('br');
+            br.id = "sidebar_sep_7";
+            if (ss7 == "Horizontal Line") {
+                shortcutsParent.insertBefore(hr, shortcuts[ss7L])
+            } else {
+                shortcutsParent.insertBefore(br, shortcuts[ss7L])
+            }
+        }
+        if (ss8L != undefined && ss8L != null) {
+            let hr = document.createElement('hr');
+            hr.style.width = ss8W+"%";
+            hr.style.border = "1px solid "+ss8C;
+            hr.style.backgroundColor = ss8C;
+            if (ss8A == "left") {
+                hr.style.marginLeft = "5px";
+            } else if (ss8A == "right") {
+                hr.style.marginRight = "5px";
+            }       
+            hr.id = "sidebar_sep_8";
+            let br = document.createElement('br');
+            br.id = "sidebar_sep_8";
+            if (ss8 == "Horizontal Line") {
+                shortcutsParent.insertBefore(hr, shortcuts[ss8L])
+            } else {
+                shortcutsParent.insertBefore(br, shortcuts[ss8L])
+            }
+        }
+        if (ss9L != undefined && ss9L != null) {
+            let hr = document.createElement('hr');
+            hr.style.width = ss9W+"%";
+            hr.style.border = "1px solid "+ss9C;
+            hr.style.backgroundColor = ss9C;
+            if (ss9A == "left") {
+                hr.style.marginLeft = "5px";
+            } else if (ss9A == "right") {
+                hr.style.marginRight = "5px";
+            }       
+            hr.id = "sidebar_sep_9";
+            let br = document.createElement('br');
+            br.id = "sidebar_sep_9";
+            if (ss9 == "Horizontal Line") {
+                shortcutsParent.insertBefore(hr, shortcuts[ss9L])
+            } else {
+                shortcutsParent.insertBefore(br, shortcuts[ss9L])
+            }
+        }
+        if (ss10L != undefined && ss10L != null) {
+            let hr = document.createElement('hr');
+            hr.style.width = ss10W+"%";
+            hr.style.border = "1px solid "+ss10C;
+            hr.style.backgroundColor = ss10C;
+            if (ss10A == "left") {
+                hr.style.marginLeft = "5px";
+            } else if (ss10A == "right") {
+                hr.style.marginRight = "5px";
+            }       
+            hr.id = "sidebar_sep_10";
+            let br = document.createElement('br');
+            br.id = "sidebar_sep_10";
+            if (ss10 == "Horizontal Line") {
+                shortcutsParent.insertBefore(hr, shortcuts[ss10L])
+            } else {
+                shortcutsParent.insertBefore(br, shortcuts[ss10L])
             }
         }
     }
