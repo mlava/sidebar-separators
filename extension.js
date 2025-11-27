@@ -3,21 +3,8 @@ const SEP_IDS = Array.from({ length: NUM_SEPARATORS }, (_, i) => `sidebar_sep_${
 const DEFAULT_LABEL_FONT_SIZE_REM = 0.75;
 
 let separators = [];
-let debugLogging = false;
 let defaultSeparatorColor = "#999999";
 let activeSeparatorCount = 1;
-
-function toBool(value) {
-  if (typeof value === "boolean") return value;
-  if (typeof value === "string") return value.trim().toLowerCase() === "true";
-  if (typeof value === "number") return value !== 0;
-  if (value && typeof value === "object") {
-    if ("checked" in value) return !!value.checked;
-    if (value.target && "checked" in value.target) return !!value.target.checked;
-    if ("on" in value) return !!value.on;
-  }
-  return false;
-}
 
 function isValidHexColor(value) {
   if (typeof value !== "string") return false;
@@ -85,11 +72,9 @@ function createSeparators() {
 
   const { shortcutsParent, shortcuts } = getShortcuts();
   if (!shortcutsParent || !shortcuts.length) {
-    if (debugLogging) {
-      console.warn(
-        "[sidebar-separators] No starred-pages container or no shortcuts found; skipping render."
-      );
-    }
+    console.warn(
+      "[sidebar-separators] No starred-pages container or no shortcuts found; skipping render."
+    );
     return;
   }
 
@@ -158,21 +143,11 @@ function createSeparators() {
     try {
       shortcutsParent.insertBefore(node, refNode);
     } catch (e) {
-      if (debugLogging) {
-        console.error(
-          `[sidebar-separators] Failed to insert separator index ${idx} at position ${index}`,
-          e
-        );
-      }
+      console.error(
+        `[sidebar-separators] Failed to insert separator index ${idx} at position ${index}`,
+        e
+      );
     }
-  }
-
-  if (debugLogging) {
-    console.log("[sidebar-separators] Rendered separators", {
-      separators,
-      activeSeparatorCount,
-      shortcutsCount: getShortcuts().shortcuts.length,
-    });
   }
 }
 
@@ -232,8 +207,6 @@ export default {
       defaultSeparatorColor = "#999999";
     }
 
-    // Load debug setting
-    debugLogging = toBool(extensionAPI.settings.get("ss-debug"));
     activeSeparatorCount = clampSeparatorCount(extensionAPI.settings.get("ss-count") ?? 1);
 
     separators = Array.from({ length: NUM_SEPARATORS }, (_, i) => {
@@ -280,9 +253,7 @@ export default {
               try {
                 extensionAPI.settings.set("ss-count", activeSeparatorCount);
               } catch (e) {
-                if (debugLogging) {
-                  console.warn("[sidebar-separators] Failed to persist count", e);
-                }
+                console.warn("[sidebar-separators] Failed to persist count", e);
               }
               createSeparators();
               extensionAPI.settings.panel.create(buildSettingsConfig());
@@ -376,22 +347,6 @@ export default {
           },
         });
       }
-
-      /* // possible future debug setting
-      settings.push({
-        id: "ss-debug",
-        name: "Debug logging",
-        description:
-          "Log sidebar separator layout details to the console (useful for troubleshooting).",
-        action: {
-          type: "switch",
-          onChange: (value) => {
-            debugLogging = toBool(value);
-            createSeparators();
-          },
-        },
-      });
-      */
 
       return {
         tabTitle: "Sidebar Separators",
