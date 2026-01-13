@@ -1,30 +1,86 @@
-Organise your left sidebar shortcuts with separators.
+# Sidebar Separators & Aliases
 
-**New in this version:**
-- Text labels as an option instead of just a horizontal rule or blank space
-- Adjustable font size for label separators
-- Settings panel dynamically shows only the separators you’ve enabled (no more huge list)
-- Safer handling of positions and sizes (indices are clamped to your actual shortcut list; widths and font sizes are kept in sensible ranges)
+**Sidebar Separators & Aliases** is a Roam Research extension that helps you organise your left sidebar shortcuts with visual separators *and* optional per‑shortcut display aliases — without modifying your actual page titles.
 
-*Previously:*
-- Define up to 10 different separators for your sidebar
-- Set the colour, width and alignment for each separator
+---
 
-Sometimes you just want some visual separation between your list of shortcuts. This extension allows you to add a horizontal line, blank space, or a small label between any of your shortcuts to make sections easier to scan.
+## ✨ Features
 
-![image](https://user-images.githubusercontent.com/6857790/219263679-cd1ab703-bc54-49c3-a7a0-a82016b66199.png)
+### Sidebar separators
+- Add up to **10 separators** to your left sidebar.
+- Three separator styles:
+  - **Horizontal line**
+  - **Blank space**
+  - **Label**
+- Fine‑grained control per separator:
+  - **Location** (by shortcut position, `0 = top`)
+  - **Alignment** (`left`, `center`, `right`)
+  - **Width** (10–100%)
+  - **Colour** (HEX, theme‑aware fallback)
+  - **Label text** and **font size** (for label separators)
 
+### Shortcut aliases (new)
+- Optionally define **display aliases** for individual sidebar shortcuts.
+- Aliases affect **only the sidebar display**, not:
+  - the page title
+  - links
+  - references
+  - search
+- Aliases are **keyed by page UID**, so they remain stable if you reorder shortcuts.
 
-### How it works
+### Safer, lighter implementation
+- No writes to your Roam graph — DOM‑only changes.
+- Indexes, widths, and font sizes are clamped to safe ranges.
+- Mutation observers are scoped tightly to avoid unnecessary work.
+- All changes are fully reversible on unload.
 
-- Open Roam Depot → Settings → **Sidebar Separators**.
-- Choose the **Number of separators** you want (1–10). The panel will expand to show settings for each active separator.
-- For each separator, you can configure:
-  - **Style**: `Horizontal Line`, `Blank Space`, or `Label`
-  - **Location**: the shortcut *position* to insert at (`0 = top`, `1 = before your second shortcut`, etc.). The value is clamped so it never crashes if you don’t have that many shortcuts.
-  - **Alignment**: `center`, `left`, or `right`
-  - **Width**: as a percentage (10–100%)
-  - **Colour**: HEX (e.g. `#999999`). If invalid, a theme-matched default is used.
-  - **Label text** and **label font size** (when style is set to `Label`)
+---
 
-> 📝 Tip: If you just want one separator between two “clusters” of shortcuts, set the location to the index of the first shortcut in the second cluster (e.g. `3` to insert before your fourth shortcut).
+## 🧭 How to use
+
+1. Open **Roam Depot → Settings → Sidebar Separators & Aliases**.
+2. Toggle **“Show Sidebar Separator Controls”** to configure separators.
+3. Choose the **number of separators** you want (1–10).
+4. For each separator, configure:
+   - Style
+   - Location (shortcut index)
+   - Alignment
+   - Width
+   - Colour
+   - Optional label text and font size
+5. Toggle **“Show Shortcut Alias Controls”** to define per‑shortcut aliases.
+
+> 💡 **Tip:**  
+> To insert a separator between two groups of shortcuts, set the location to the index of the *first shortcut in the second group*.  
+> Example: location `3` inserts the separator before your fourth shortcut.
+
+---
+
+## 🧠 Notes & behaviour
+
+- If you rename a page:
+  - Shortcut aliases remain attached to the page via its UID.
+- Removing an alias instantly restores the original shortcut text.
+- Removing the extension restores your sidebar exactly as Roam left it.
+
+---
+
+## 🔒 Safety & performance
+
+- No mutation of block content or page titles.
+- No polling loops — observers attach only when necessary.
+- Designed to coexist safely with themes and other sidebar extensions.
+
+---
+
+## 📦 Changelog highlights
+
+**New in “Sidebar Separators & Aliases”**
+- Optional per‑shortcut aliases
+- UID‑based aliasing (stable across reordering)
+- Cleaner, dynamically sized settings panel
+- Reduced observer overhead
+
+---
+
+Enjoy a cleaner, more readable sidebar ✨
